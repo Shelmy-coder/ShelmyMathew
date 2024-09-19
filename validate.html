@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<script>
+    function validateForm() {
+  let a=document.registration.name.value;
+  let b=document.registration.email.value;
+  let c=document.registration.address.value;
+  if (a == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  else if(b=="")
+  {
+    alert("Email must be filled out");
+    return false;
+  }
+  else if(c=="")
+  {
+    alert("Address should not be blank");
+    return false;
+  }
+  else{
+    alert("Registered successfully");
+  }
+}
+</script>
+<body>
+    <form action="" name="registration" onsubmit="return validateForm()" method="post">
+        <div class="mb-3 mt-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+          </div>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Address:</label>
+          <input type="address" class="form-control" id="pwd" placeholder="Enter Address" name="address">
+        </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+      </form>   
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>        
+    
+</body>
+</html>
